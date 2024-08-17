@@ -24,7 +24,7 @@ def lambda_handler(event, context):
     filename = "spotify_raw_" +str(datetime.now())+ ".json"
     
     client.put_object(
-        Bucket = "spotify-etl-project-shweta",
+        Bucket = "spotify-etl-shailesh-chaudhari",
         Key = "raw_data/to_processed/" + filename,
         Body = json.dumps(spotify_data)
         )
